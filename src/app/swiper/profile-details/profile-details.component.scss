@@ -1,0 +1,34 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .profile-card {
+    width: 90%;
+    max-width: 400px;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  }
+  
+  .profile-details {
+    text-align: center;
+  }
+  
+  .mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+  }
+  
+  .profile-card.swipe-left {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  
+  .profile-card.swipe-right {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+  

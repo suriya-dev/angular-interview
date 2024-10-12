@@ -1,0 +1,29 @@
+ 
+  
+  <!-- Container for the profile card -->
+  <div class="profile-container" *ngIf="currentProfile">
+    <mat-card class="profile-card">
+      <img mat-card-image [src]="currentProfile.image" alt="Profile Image" />
+  
+      <mat-card-content>
+        <div class="profile-details">
+          <h2>{{ currentProfile.name }}</h2>
+          <p>{{ currentProfile.details }}</p>
+        </div>
+      </mat-card-content>
+  
+      <!-- Action Buttons -->
+      <mat-card-actions>
+        <button mat-raised-button color="warn" (click)="notInterested()">
+          <mat-icon>close</mat-icon> No
+        </button>
+        <button mat-raised-button (click)="shortlist()">
+          <mat-icon>star_outline</mat-icon> Shortlist
+        </button>
+        <button mat-raised-button color="primary" (click)="interested()">
+          <mat-icon>check</mat-icon> Yes
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  

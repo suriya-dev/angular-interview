@@ -12,21 +12,33 @@ import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileSwipComponent } from './profile-swip/profile-swip.component';
 import { ProfileViewComponent } from './profile-swip/profile-view/profile-view.component'; 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { SwiperComponent } from './swiper/swiper.component';
+import { HammerModule } from '@angular/platform-browser';
+import { ProfileDetailsComponent } from './swiper/profile-details/profile-details.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     ProfileSwipComponent,
     ProfileViewComponent,
+    SwiperComponent,
+    ProfileDetailsComponent,
+    
     ],
   imports: [
     BrowserModule,
+    HammerModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule,
+    AppRoutingModule, 
     MatIconModule,
     MatButtonModule,
     MatCardModule,
     MatSnackBarModule,
+    
       ],
   providers: [
     provideAnimationsAsync()

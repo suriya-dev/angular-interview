@@ -1,0 +1,28 @@
+<div class="profile-swiper-container">
+    <h3>{{profiles.length - currentIndex}} Profiles pending with me <span class="new-label">5 NEW</span></h3>
+    
+    <div class="profile-card" *ngFor="let profile of profiles; let i = index"  [@swipe]="currentIndex" (swipeleft)="swipeLeft()" 
+    (swiperight)="swipeRight()" >
+        <ng-container *ngIf="i == currentIndex">
+            <div class="profile-image">
+                <img [src]="profile.image" alt="{{ profile.name }}">
+              </div>
+              <div class="profile-details">
+                <h4>{{ profile.name }}</h4>
+                <p>{{ profile.age }} Yrs, {{ profile.height }}</p>
+                <p>{{ profile.profession }}</p>
+                <p>{{ profile.location }}</p>
+              </div>
+              <div class="profile-buttons">
+                <button (click)="prev()" class="btn-yes">Yes</button>
+                <button  (click)="next()" class="btn-no">No</button>
+              </div>
+        </ng-container>
+    </div>
+  
+    <!-- <div class="navigation-buttons">
+      <button  [disabled]="currentIndex === 0">Previous</button>
+      <button  [disabled]="currentIndex === profiles.length - 1">Next</button>
+    </div> -->
+  </div>
+  
