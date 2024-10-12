@@ -1,0 +1,80 @@
+[
+    {
+      "userId": 1,
+      "name": "Priya Patel",
+      "age": 26,
+      "gender": "Female",
+      "maritalStatus": "Single",
+      "height": "5'3\"",
+      "weight": 120,
+      "religion": "Hindu",
+      "caste": "Vaishya",
+      "language": ["Gujarati", "Hindi", "English"],
+      "education": {
+        "degree": "Bachelor's",
+        "field": "Engineering",
+        "university": "University of Mumbai"
+      },
+      "profession": {
+        "jobTitle": "Software Developer",
+        "company": "Tech Innovations Pvt Ltd",
+        "location": "Mumbai, India",
+        "salary": 60000
+      },
+      "interests": ["Traveling", "Cooking", "Reading"],
+      "bio": "I am a software developer who loves to explore new places and try out different cuisines.",
+      "profilePicture": "assets/images/image2.jpg"
+    },
+    {
+      "userId": 2,
+      "name": "Aisha Khan",
+      "age": 29,
+      "gender": "Female",
+      "maritalStatus": "Single",
+      "height": "5'5\"",
+      "weight": 135,
+      "religion": "Muslim",
+      "caste": "Sunni",
+      "language": ["Urdu", "English"],
+      "education": {
+        "degree": "Master's",
+        "field": "Business Administration",
+        "university": "Harvard University"
+      },
+      "profession": {
+        "jobTitle": "Marketing Executive",
+        "company": "Global Marketing Co.",
+        "location": "London, UK",
+        "salary": 80000
+      },
+      "interests": ["Photography", "Fashion", "Fitness"],
+      "bio": "I am passionate about marketing and love to capture beautiful moments through photography.",
+      "profilePicture": "assets/images/image3.jpg"
+    },
+    {
+      "userId": 3,
+      "name": "Fatima Ali",
+      "age": 27,
+      "gender": "Female",
+      "maritalStatus": "Single",
+      "height": "5'6\"",
+      "weight": 140,
+      "religion": "Muslim",
+      "caste": "Shia",
+      "language": ["Arabic", "English"],
+      "education": {
+        "degree": "Ph.D.",
+        "field": "Psychology",
+        "university": "Stanford University"
+      },
+      "profession": {
+        "jobTitle": "Clinical Psychologist",
+        "company": "Mental Health Clinic",
+        "location": "Dubai, UAE",
+        "salary": 100000
+      },
+      "interests": ["Yoga", "Reading", "Traveling"],
+      "bio": "As a clinical psychologist, I am dedicated to helping others and promoting mental health.",
+      "profilePicture": "assets/images/image4.jpg"
+    }
+  ]

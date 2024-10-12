@@ -1,0 +1,65 @@
+/* Container styling to center the card */
+.profile-card-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Card styling */
+  .profile-card {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  /* Badge styling for Verified and Premium badges */
+  .badges {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .verified-icon {
+    color: #4285f4; /* Google blue for Verified icon */
+    margin-right: 8px;
+  }
+  
+  .premium-badge {
+    background-color: #ffcc00; /* Yellow background for premium badge */
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: white;
+  }
+  
+  /* Profile Name and Details */
+  .profile-name {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 8px 0;
+  }
+  
+  .profile-details {
+    font-size: 0.9rem;
+    color: gray;
+  }
+  
+  /* Card Actions */
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+  }
+  
+  .shortlist-button {
+    color: gray;
+  }
+  
+  .like-button {
+    color: #ff5722; /* Orange color for the like button */
+  }
+  
+
+
+
