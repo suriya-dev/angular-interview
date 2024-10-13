@@ -1,30 +1,23 @@
-import { Component } from '@angular/core';
- import { MatSnackBar } from '@angular/material/snack-bar';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import profile from '../../../assets/json/userdetails.json'
 
 @Component({
   selector: 'app-profile-details',
   templateUrl: './profile-details.component.html',
   styleUrl: './profile-details.component.scss'
 })
-export class ProfileDetailsComponent {
-  currentIndex = 0;
-  profiles = [
-    {
-      name: 'Pragati',
-      details: '27 Yrs, 5 ft 5 in, MBBS, Doctor, PooSam...',
-      image: 'assets/images/image2.jpg'
-    },
-    {
-      name: 'Aiswarya',
-      details: '26 Yrs, 5 ft 4 in, MBBS, Doctor, Nadar...',
-      image: 'assets/images/image3.jpg'
-    }
-    // More profiles
-  ];
+export class ProfileDetailsComponent  implements OnInit{
+  @Input()currentIndex = 0;
+  @Output() backClickEvent = new EventEmitter();
+  profiles : any = [...profile ];
 
-  currentProfile = this.profiles[this.currentIndex];
+  currentProfile : any = {};
 
   constructor(private snackBar: MatSnackBar) {}
+  ngOnInit(): void {
+    this.currentProfile = this.profiles.filter(el=>( el.userId == this.currentIndex ))[0]
+  }
 
   // Show toast message
   showToast(message: string) {
@@ -72,5 +65,8 @@ export class ProfileDetailsComponent {
       this.nextProfile();
       card.classList.remove('swipe-right');
     }, 500);
+  }
+  backClick(){
+    this.backClickEvent.emit(true)
   }
 }

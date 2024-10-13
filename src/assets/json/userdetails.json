@@ -1,4 +1,30 @@
 [
+  {
+    "userId": 0,
+    "name": "Fatima Ali",
+    "age": 27,
+    "gender": "Female",
+    "maritalStatus": "Single",
+    "height": "5'6\"",
+    "weight": 140,
+    "religion": "Muslim",
+    "caste": "Shia",
+    "language": ["Arabic", "English"],
+    "education": {
+      "degree": "Ph.D.",
+      "field": "Psychology",
+      "university": "Stanford University"
+    },
+    "profession": {
+      "jobTitle": "Clinical Psychologist",
+      "company": "Mental Health Clinic",
+      "location": "Dubai, UAE",
+      "salary": 100000
+    },
+    "interests": ["Yoga", "Reading", "Traveling"],
+    "bio": "As a clinical psychologist, I am dedicated to helping others and promoting mental health.",
+    "profilePicture": "assets/images/image1.jpg"
+  },
     {
       "userId": 1,
       "name": "Priya Patel",
@@ -50,9 +76,8 @@
       "interests": ["Photography", "Fashion", "Fitness"],
       "bio": "I am passionate about marketing and love to capture beautiful moments through photography.",
       "profilePicture": "assets/images/image3.jpg"
-    },
-    {
-      "userId": 3,
+    },{
+      "userId": 4,
       "name": "Fatima Ali",
       "age": 27,
       "gender": "Female",
@@ -77,4 +102,5 @@
       "bio": "As a clinical psychologist, I am dedicated to helping others and promoting mental health.",
       "profilePicture": "assets/images/image4.jpg"
     }
+    
   ]

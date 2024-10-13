@@ -4,31 +4,96 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-  }
-  
-  .profile-card {
+
+    .header {
+        text-align: start !important;
+        right: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+
+        h5 {
+            margin-bottom: 10px;
+            font-weight: 900;
+            font-size: larger;
+            color: white;
+        }
+    }
+}
+
+.arrow-design{
+    color: #ffff;
+}
+
+.badges {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+.verified-icon {
+    color: #4285f4;
+    margin-right: 8px;
+}
+
+.premium-badge {
+    background-color: #ffcc00;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.profile-card {
     width: 90%;
     max-width: 400px;
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-  }
-  
-  .profile-details {
+
+    img {
+        height: 450px !important;
+    }
+}
+
+.profile-details {
     text-align: center;
-  }
-  
-  .mat-card-actions {
+    text-align: left !important;
+    margin: 0px !important;
+    h2{
+        margin: 0px !important;
+    }
+    p {
+        margin: 0px !important;
+    }
+}
+
+.mat-card-actions {
     display: flex;
     justify-content: space-between;
     padding: 16px;
-  }
-  
-  .profile-card.swipe-left {
+}
+
+.profile-card.swipe-left {
     transform: translateX(-200%);
     opacity: 0;
-  }
-  
-  .profile-card.swipe-right {
+}
+
+.profile-card.swipe-right {
     transform: translateX(200%);
     opacity: 0;
-  }
-  
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+h4 {
+    margin-bottom: 0px !important;
+}
+
+.global {
+    height: 100vh;
+}

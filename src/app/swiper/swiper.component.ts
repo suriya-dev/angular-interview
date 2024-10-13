@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import profileData from '../../assets/json/userdetails.json'
+
 
 @Component({
   selector: 'app-swiper',
@@ -19,34 +21,13 @@ import { trigger, transition, style, animate } from '@angular/animations';
   ],
 })
 export class SwiperComponent {
-  profiles = [
-    {
-      name: 'Priyanka',
-      age: 27,
-      height: '5 ft 2 in',
-      profession: 'Doctor',
-      location: 'Chennai, Tamil Nadu, India',
-      image: 'assets/images/image2.jpg'
-    },
-    {
-      name: 'Aiswarya',
-      age: 26,
-      height: '5 ft 0 in',
-      profession: 'Doctor',
-      location: 'Tamil Nadu, India',
-      image: 'assets/images/image3.jpg'
-    },
-    {
-      name: 'Sneha',
-      age: 28,
-      height: '5 ft 3 in',
-      profession: 'Engineer',
-      location: 'Coimbatore, Tamil Nadu, India',
-      image: 'assets/images/image4.jpg'
-    }
-  ];
 
+
+  isDetailsPage: boolean = false;
   currentIndex : any = 0;
+  profiles : any = [...profileData];
+  selectedUser :  any = {};
+
 
   next() {
     if (this.currentIndex < this.profiles.length - 1) {
@@ -54,7 +35,9 @@ export class SwiperComponent {
     }
   }
 
-  prev() {
+  prev(obj) {
+    this.selectedUser =  obj;
+    this.isDetailsPage = true;
     if (this.currentIndex > 0) {
       this.currentIndex--;
     }
@@ -72,5 +55,8 @@ export class SwiperComponent {
     if (this.currentIndex > 0) {
       this.currentIndex--;
     }
+  }
+  childEmit(value){
+    this.isDetailsPage = false
   }
 }

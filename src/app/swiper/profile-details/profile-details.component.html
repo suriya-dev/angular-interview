@@ -1,29 +1,39 @@
- 
-  
-  <!-- Container for the profile card -->
-  <div class="profile-container" *ngIf="currentProfile">
-    <mat-card class="profile-card">
-      <img mat-card-image [src]="currentProfile.image" alt="Profile Image" />
-  
-      <mat-card-content>
-        <div class="profile-details">
-          <h2>{{ currentProfile.name }}</h2>
-          <p>{{ currentProfile.details }}</p>
+<!-- Container for the profile card -->
+<div class="profile-container" *ngIf="currentProfile">
+    <div class="header">
+        <div class="" (click)="backClick()"> <mat-icon class="arrow-design">arrow_back</mat-icon> </div>
+        <div class="">
+        <h5> Daily Recommendation</h5>
+
         </div>
-      </mat-card-content>
-  
-      <!-- Action Buttons -->
-      <mat-card-actions>
-        <button mat-raised-button color="warn" (click)="notInterested()">
-          <mat-icon>close</mat-icon> No
-        </button>
-        <button mat-raised-button (click)="shortlist()">
-          <mat-icon>star_outline</mat-icon> Shortlist
-        </button>
-        <button mat-raised-button color="primary" (click)="interested()">
-          <mat-icon>check</mat-icon> Yes
-        </button>
-      </mat-card-actions>
+    </div>
+    <mat-card class="profile-card">
+        <img mat-card-image [src]="currentProfile.profilePicture" alt="Profile Image" />
+
+        <mat-card-content>
+            <div class="badges">
+                <mat-icon class="verified-icon">verified</mat-icon>
+                <span class="premium-badge">Premium NRI</span>
+            </div>
+            <div class="profile-details">
+                <h2>{{ currentProfile?.name }}</h2>
+                <p>{{currentProfile?.age}} Yers. {{currentProfile.height}} in, {{currentProfile?.profession?.jobTitle}} ,{{currentProfile?.religion}}, {{currentProfile?.caste}}, {{currentProfile?.profession?.location}} </p>
+                <p>{{ currentProfile?.details }}</p>
+            </div>
+        </mat-card-content>
+        <hr>
+        <!-- Action Buttons -->
+        <mat-card-actions align="start" class="actions">
+            <button mat-raised-button class="shortlist-button" (click)="shortlist()">
+                <mat-icon>star_outline</mat-icon> Shortlist
+            </button>
+            <h4> Like Her ?</h4>
+            <button mat-raised-button color="warn" (click)="notInterested()">
+                <mat-icon>close</mat-icon>
+            </button>
+            <button mat-raised-button color="primary" class="like-button" (click)="interested()">
+                <mat-icon>check</mat-icon>
+            </button>
+        </mat-card-actions>
     </mat-card>
-  </div>
-  
+</div>
