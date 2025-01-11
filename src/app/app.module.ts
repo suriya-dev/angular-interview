@@ -13,6 +13,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { SwiperComponent } from './swiper/swiper.component';
 import { HammerModule } from '@angular/platform-browser';
 import { ProfileDetailsComponent } from './swiper/profile-details/profile-details.component';
+import { FileValidationComponent } from './file-validation/file-validation.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ProfileDetailsComponent } from './swiper/profile-details/profile-detail
     AppComponent,
     SwiperComponent,
     ProfileDetailsComponent,
+    FileValidationComponent,
     
     ],
   imports: [

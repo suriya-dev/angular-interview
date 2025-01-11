@@ -1,0 +1,35 @@
+<div class="container mt-4">
+    <h2>Organization Chart Validator</h2>
+  
+    <!-- File Upload -->
+    <form>
+      <div class="mb-3">
+        <label for="fileInput" class="form-label">Upload CSV File:</label>
+        <input
+          type="file"
+          id="fileInput"
+          (change)="onFileChange($event)"
+          accept=".csv"
+          class="form-control"
+        />
+      </div>
+    </form>
+  
+    <!-- Error Display -->
+    <div *ngIf="errors.length > 0" class="mt-4">
+      <h4>Errors Found:</h4>
+      <div *ngFor="let rule of groupedErrors">
+        <h5>{{ rule.name }}</h5>
+        <ul>
+          <li *ngFor="let error of rule.errors">
+            <strong>Row {{ error.row }}</strong>: {{ error.message }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Success Message -->
+    <div *ngIf="!errors.length && fileUploaded" class="alert alert-success mt-4">
+      No errors found! Validation successful.
+    </div>         
+  </div>

@@ -1,0 +1,19 @@
+<div class="container mt-5">
+    <div *ngIf="profiles.length" class="card text-center">
+      <img [src]="profiles[currentIndex]?.image" class="card-img-top" alt="{{ profiles[currentIndex]?.name }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ profiles[currentIndex]?.name }}, {{ profiles[currentIndex]?.age }}</h5>
+        <div class="d-flex justify-content-around">
+          <button class="btn btn-danger" (click)="onSwipe('left')">
+            <i class="bi bi-x-lg"></i> Not Interested
+          </button>
+          <button class="btn btn-warning" (click)="onShortlist()">
+            <i class="bi bi-star"></i> Shortlist
+          </button>
+          <button class="btn btn-success" (click)="onSwipe('right')">
+            <i class="bi bi-check-lg"></i> Interested
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
